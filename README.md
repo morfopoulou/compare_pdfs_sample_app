@@ -4,7 +4,10 @@
 ## Deploy to Cloud Run
 
 Ensure the default Cloud Run service account has the following IAM permissions:
-- Discovery Engine Viewer
+- Cloud Build Editor
+- Logging Admin
+- Storage Object User
+- Vertex AI User
 
 
 Set the environment variables in `initial.sh'
