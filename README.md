@@ -6,7 +6,7 @@ git clone https://github.com/morfopoulou/compare_pdfs_sample_app.git
 
 ## Deploy to Cloud Run
 
-Ensure the default Cloud Run service account has the following IAM permissions:
+Ensure the default Cloud Run service account (if not specified that will be PROJECT_NUMBER-compute@developer.gserviceaccount.com) has the following IAM permissions:
 - Cloud Build Editor
 - Logging Admin
 - Storage Object User
