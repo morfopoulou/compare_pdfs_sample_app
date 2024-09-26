@@ -2,7 +2,7 @@
 
 ## Clone
 
-https://github.com/morfopoulou/compare_pdfs_sample_app.git
+git clone https://github.com/morfopoulou/compare_pdfs_sample_app.git
 
 ## Deploy to Cloud Run
 
