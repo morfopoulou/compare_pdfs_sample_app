@@ -21,8 +21,10 @@ gcloud artifacts repositories create "$AR_REPO" --location="$GCP_REGION" --repos
 gcloud auth configure-docker "$GCP_REGION-docker.pkg.dev"
 gcloud builds submit --tag "$GCP_REGION-docker.pkg.dev/$GCP_PROJECT/$AR_REPO/$SERVICE_NAME"
 ```
-```Before you can push or pull images, configure Docker to use the Google Cloud CLI to authenticate requests to Artifact Registry.
+Before you can push or pull images, configure Docker to use the Google Cloud CLI to authenticate requests to Artifact Registry.
 In Cloud Shell, execute the following command to create a registry
+
+```
 gcloud artifacts repositories create "$AR_REPO" --location="$GCP_REGION" --repository-format=Docker
 ```
 ```
