@@ -11,6 +11,7 @@ Ensure the default Cloud Run service account has the following IAM permissions:
 - Logging Admin
 - Storage Object User
 - Vertex AI User
+- Artifact Registry Administrator
 
 
 Set the environment variables in `initial.sh'
