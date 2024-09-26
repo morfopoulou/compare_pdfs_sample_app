@@ -1,5 +1,8 @@
 ## Sample Compare PDFs with Gemini Application
 
+## Clone
+
+https://github.com/morfopoulou/compare_pdfs_sample_app.git
 
 ## Deploy to Cloud Run
 
