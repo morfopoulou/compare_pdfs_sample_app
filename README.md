@@ -22,21 +22,26 @@ gcloud auth configure-docker "$GCP_REGION-docker.pkg.dev"
 gcloud builds submit --tag "$GCP_REGION-docker.pkg.dev/$GCP_PROJECT/$AR_REPO/$SERVICE_NAME"
 ```
 Before you can push or pull images, configure Docker to use the Google Cloud CLI to authenticate requests to Artifact Registry.
-In Cloud Shell, execute the following command to create a registry
+In Cloud Shell, execute the following command to create a Artifact Registry repository:
 
 ```
 gcloud artifacts repositories create "$AR_REPO" --location="$GCP_REGION" --repository-format=Docker
 ```
-```
+
 To set up authentication to Docker repositories in the region us-west1, run the following command:
+
+```
 gcloud auth configure-docker "$GCP_REGION-docker.pkg.dev"
 ```
+
+To build the Docker image of your application and push it to Google Artifact Registry
+
 ```
-To build the Docker image of your application and push it to Google Artifact Registry (AR)
 gcloud builds submit --tag "$GCP_REGION-docker.pkg.dev/$GCP_PROJECT/$AR_REPO/$SERVICE_NAME"
 ```
 
-``` Now deploy in Cloud Run
+Now deploy in Cloud Run
+``` 
 gcloud run deploy "$SERVICE_NAME" \
   --port=8080 \
   --image="$GCP_REGION-docker.pkg.dev/$GCP_PROJECT/$AR_REPO/$SERVICE_NAME" \
