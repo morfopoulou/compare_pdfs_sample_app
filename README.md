@@ -14,10 +14,11 @@ Set the environment variables in `initial.sh'
 Add your app name in the Dockerfile
 
 
-In Cloud Shell, execute the following commands:
+```In Cloud Shell, execute the following commands:
 gcloud artifacts repositories create "$AR_REPO" --location="$GCP_REGION" --repository-format=Docker
 gcloud auth configure-docker "$GCP_REGION-docker.pkg.dev"
 gcloud builds submit --tag "$GCP_REGION-docker.pkg.dev/$GCP_PROJECT/$AR_REPO/$SERVICE_NAME"
+```
 
 
 ``` Deploy in Cloud Shell
